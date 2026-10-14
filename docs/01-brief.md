@@ -2,13 +2,13 @@
 
 ## El emprendimiento
 
-**Lienzo Vivo** es un emprendimiento **real** de arte visual y taller de cuadros hechos a mano con sede en Santiago de Chile. Se especializa en la creación de obras de arte originales sobre bastidor de tela y madera: cuadros con relieves y texturas táctiles (pasta de modelar, yeso y arena volcánica), pinturas al óleo y acrílico de estilo contemporáneo (japandi, nórdico, minimalista y orgánico), así como dípticos, trípticos y cuadros a medida por encargo.
+**Lienzo Vivo** es un emprendimiento **real** de arte visual y cuadros hechos a mano con sede en valparaiso de chile . Se especializa en la creación de obras de arte originales sobre bastidor de tela y madera: cuadros con relieves y texturas táctiles (pasta de modelar y yeso ), pinturas al óleo y acrílico de estilo paisajes y retratos , cuadros a medida por encargo.
 
-Actualmente, Lienzo Vivo comercializa sus obras principalmente a través de su cuenta de Instagram (@lienzovivo.arte), participación en ferias de diseño local (como Bazar ED y MásDeco Market) y atención por WhatsApp con clientes referidos por decoradores e interioristas.
+Actualmente, Lienzo Vivo comercializa sus obras principalmente a través de su cuenta de Instagram (@lienzovivo.arte), participación en ferias de diseño local  y atención por WhatsApp con clientes referidos por decoradores e interioristas.
 
 ## Propuesta de valor
 
-> Ayudamos a **personas apasionadas por el diseño de interiores y la decoración del hogar** a **transformar sus paredes en espacios con carácter, calidez y personalidad única** gracias a **cuadros 100% pintados a mano con texturas originales de autor y asesoría visual a escala para elegir la medida y paleta perfecta sin temor a equivocarse**.
+> Ayudamos a **personas apasionadas por el diseñar arte  y cuadros por encargos** a **transformar sus paredes en espacios con carácter, calidez y personalidad única** gracias a **cuadros 100% pintados a mano con texturas originales de autor y asesoría visual a escala para elegir la medida y paleta perfecta sin temor a equivocarse**.
 
 ### ¿Qué nos diferencia?
 
@@ -19,7 +19,7 @@ Actualmente, Lienzo Vivo comercializa sus obras principalmente a través de su c
 ## Objetivo del sitio
 
 - **Principal:** Vender obras de arte originales en stock con catálogo filtrable y canalizar solicitudes de cuadros personalizados a medida.
-- **Secundario:** Captar contactos interesados en interiorismo ofreciendo la guía descargable *"Cómo elegir las dimensiones y paleta perfecta para el cuadro de tu living"* a cambio de su correo, además de un 10% de descuento de bienvenida.
+- **Secundario:** Captar contactos interesados ofreciendo la guía descargable *"Cómo elegir las dimensiones y paleta perfecta para el cuadro de tu living"* a cambio de su correo, además de un 10% de descuento de bienvenida.
 
 ## Referentes
 

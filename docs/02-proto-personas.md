@@ -2,14 +2,13 @@
 
 ![Avatar de Sofía](img/sofia.png)
 
-**Sofía Valenzuela, 32 años.** Arquitecta e interiorista independiente, vive en un departamento recién remodelado en Providencia (Santiago). Trabaja de forma híbrida y diseña espacios residenciales modernos y cálidos.
-
+**johana rojas, 19 años.** artista independiente, vive en una casa recién remodelado en valparaiso (quinta region). trabaja de forma independiente 
 > "Quiero que las paredes de mi hogar y las de mis proyectos tengan alma, textura y calidez, no una lámina de papel genérica impresa en masa que cualquiera tiene en su living."
 
 ## Comportamientos
 
-- Pasa tiempo en **Instagram (@sofia.interiores) y Pinterest** guardando referencias de estilos *japandi*, *wabi-sabi*, mediterráneo y minimalismo cálido.
-- Navega y cotiza desde su **smartphone (iPhone 14 Pro)** en sus tiempos libres: durante las noches entre las 21:00 y las 23:30 mientras descansa en su sala, o en trayectos entre visitas a obras y proveedores.
+- Pasa tiempo en **Instagram (yobi-cuadros) y Pinterest** guardando referencias de estilos *realistas*, *paisajes*..
+- Navega y cotiza desde su ** (samsung A05)** en sus tiempos libres: durante las noches entre las 21:00 y las 23:30 mientras descansa en su sala, o en trayectos entre visitas a obras y proveedores.
 - Cuando evalúa comprar una pieza de arte, revisa detenidamente fotos en primer plano (*macro*) para comprobar la textura real de la pasta y las capas de pintura.
 - Prefiere comprar de forma directa por la web si el cálculo de despacho y embalaje reforzado está claro y transparente desde el inicio.
 

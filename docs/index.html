@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentación Técnica — Lienzo Vivo (Evaluación Parcial 02)</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+  <style>
+    .doc-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .doc-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card-hover);
+      border-color: var(--color-primary);
+    }
+    .doc-num {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      margin-bottom: 4px;
+    }
+    .phase-badge {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      background: var(--color-surface);
+      color: var(--color-on-surface);
+      margin-bottom: 8px;
+      align-self: flex-start;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="../index.html" class="brand-logo">
+          <span class="brand-logo-text">Lienzo Vivo</span>
+          <span class="brand-logo-tag">Portal Docs</span>
+        </a>
+
+        <div style="display: flex; gap: var(--space-md); align-items: center;">
+          <a href="../index.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.8125rem;">Ir al Sitio Web en Vivo</a>
+          <a href="../tienda.html" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Tienda</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container section-padding">
+      <div class="section-header">
+        <span class="badge-technique" style="margin-bottom: 8px;">Evaluación Parcial 02 · Taller Web</span>
+        <h1>Documentación Técnica del Proyecto</h1>
+        <p>Índice completo de especificaciones, investigación de usuario, arquitectura de información, design system y criterios de calidad QA.</p>
+      </div>
+
+      <!-- Banner hacia el sitio en vivo -->
+      <div style="background: linear-gradient(135deg, var(--color-surface) 0%, #FAF4EB 100%); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-xl); margin-bottom: var(--space-2xl); display: flex; justify-content: space-between; align-items: center; gap: var(--space-md); flex-wrap: wrap;">
+        <div>
+          <h2 style="font-size: 1.5rem; margin-bottom: 4px;">🚀 Sitio Web Totalmente Operativo</h2>
+          <p style="color: var(--color-on-surface-muted); font-size: 0.9375rem;">Todas las pantallas, flujos de compra, filtros en vivo y formularios están construidos con HTML5 semántico y CSS3 puro.</p>
+        </div>
+        <a href="../index.html" class="btn-primary" style="padding: 12px 24px;">Ver Sitio Principal (Landing)</a>
+      </div>
+
+      <!-- Grilla de Entregables Markdown -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-lg);">
+        
+        <!-- 01 -->
+        <a href="01-brief.md" class="doc-card">
+          <span class="phase-badge">Fase 1 · Definición</span>
+          <div class="doc-num">01. Brief del Emprendimiento</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Propuesta de valor, rubro, objetivos comerciales y análisis de referentes.</p>
+        </a>
+
+        <!-- 02 -->
+        <a href="02-proto-personas.md" class="doc-card">
+          <span class="phase-badge">Fase 1 · Usuario</span>
+          <div class="doc-num">02. Proto-Persona</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Ficha detallada de Sofía Valenzuela (32 años, arquitecta e interiorista).</p>
+        </a>
+
+        <!-- 03 -->
+        <a href="03-funcionalidades.md" class="doc-card">
+          <span class="phase-badge">Fase 1 · Alcance</span>
+          <div class="doc-num">03. Funcionalidades</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Matriz de 7 funcionalidades base adaptadas + 6 propias priorizadas.</p>
+        </a>
+
+        <!-- 04 -->
+        <a href="04-tecnologias.md" class="doc-card">
+          <span class="phase-badge">Fase 1 · Stack</span>
+          <div class="doc-num">04. Tecnologías del Proyecto</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">HTML5, CSS3, Google Fonts, Webpay Plus y directrices de despliegue.</p>
+        </a>
+
+        <!-- 05 -->
+        <a href="05-arquitectura.md" class="doc-card">
+          <span class="phase-badge">Fase 1 · Flujos</span>
+          <div class="doc-num">05. Arquitectura de Información</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Mapa de sitio en árbol, user flows de compra y catálogo de obras.</p>
+        </a>
+
+        <!-- 06 -->
+        <a href="06-moodboard.md" class="doc-card">
+          <span class="phase-badge">Fase 2 · Visual</span>
+          <div class="doc-num">06. Moodboard de Inspiración</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Concepto Japandi / Minimalismo cálido y tablero visual.</p>
+        </a>
+
+        <!-- 07 -->
+        <a href="07-componentes.md" class="doc-card">
+          <span class="phase-badge">Fase 2 · UI</span>
+          <div class="doc-num">07. Calco de Componentes UI</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">9 componentes reutilizables en escala de grises con justificación.</p>
+        </a>
+
+        <!-- 08 -->
+        <a href="08-color-tipografia.md" class="doc-card">
+          <span class="phase-badge">Fase 2 · Sistema</span>
+          <div class="doc-num">08. Color y Tipografía</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Validación WCAG AA de contraste y escala tipográfica Fraunces / Inter.</p>
+        </a>
+
+        <!-- DESIGN.md -->
+        <a href="../DESIGN.md" class="doc-card" style="border: 2px solid var(--color-primary);">
+          <span class="phase-badge" style="background: var(--color-primary); color: white;">Design System Central</span>
+          <div class="doc-num">DESIGN.md (Tokens YAML)</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Design System oficial en YAML con variables, estados y reglas de layout.</p>
+        </a>
+
+        <!-- 09 -->
+        <a href="09-spec-diseno.md" class="doc-card">
+          <span class="phase-badge">Fase 2 · Stitch</span>
+          <div class="doc-num">09. Spec de Diseño</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Prompts pantalla por pantalla para Google Stitch (Desktop y Mobile).</p>
+        </a>
+
+        <!-- 10 -->
+        <a href="10-spec-desarrollo.md" class="doc-card">
+          <span class="phase-badge">Fase 2 · Frontend</span>
+          <div class="doc-num">10. Spec de Desarrollo</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Estructura HTML5 semántica, variables en :root y criterios de aceptación.</p>
+        </a>
+
+        <!-- 11 -->
+        <a href="11-qa.md" class="doc-card">
+          <span class="phase-badge">Fase 3 · QA</span>
+          <div class="doc-num">11. QA y Coherencia</div>
+          <p style="font-size: 0.8125rem; color: var(--color-on-surface-muted);">Revisión comparativa spec vs. prototipo, mejoras y reflexión estratégica.</p>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 Lienzo Vivo SpA. Todos los derechos reservados.</div>
+        <div><a href="../index.html">Ir al Sitio Principal</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

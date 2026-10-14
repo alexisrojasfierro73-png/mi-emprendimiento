@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lienzo Vivo — Galería de Arte & Pintura al Óleo en Santiago</title>
+  <meta name="description" content="Taller de arte: cuadros originales al óleo sobre bastidor de madera hechos a mano. Marinas, animales, texturas y paisajes en Santiago de Chile.">
+  
+  <!-- Estilos Centralizados -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Encabezado y Barra de Navegación Global
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="index.html" class="brand-logo" aria-label="Lienzo Vivo - Inicio">
+          <span class="brand-logo-text">Lienzo Vivo</span>
+          <span class="brand-logo-tag">Galería de Arte</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Inicio</a></li>
+          <li><a href="tienda.html" class="nav-link">Galería / Tienda</a></li>
+          <li><a href="contacto.html" class="nav-link">Cuadros a Medida</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Consejos</a></li>
+          <li><a href="nosotros.html" class="nav-link">El Taller</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="carrito.html" class="btn-cart-nav" id="nav-cart-btn" aria-label="Ver carrito de compras">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span>Carrito</span>
+            <span class="cart-count" id="cart-counter-badge">1</span>
+          </a>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <ul class="mobile-nav-menu">
+        <li><a href="index.html" class="nav-link active">Inicio</a></li>
+        <li><a href="tienda.html" class="nav-link">Galería de Obras</a></li>
+        <li><a href="contacto.html" class="nav-link">Cotizar Cuadro a Medida</a></li>
+        <li><a href="blog.html" class="nav-link">Blog de Interiorismo</a></li>
+        <li><a href="nosotros.html" class="nav-link">Sobre el Taller</a></li>
+        <li><a href="preguntas-frecuentes.html" class="nav-link">Preguntas Frecuentes</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="hero-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Obras 100% Originales & Pintadas a Mano
+            </span>
+            <h1 class="hero-title">Cuadros al óleo que llenan de luz y vida tus espacios</h1>
+            <p class="hero-description">
+              Pinturas originales sobre bastidores de madera. Marinas, fuerza animal, pan de oro y paisajes rústicos creados para transformar tu hogar con serenidad, luz y autenticidad.
+            </p>
+            <div class="hero-cta-group">
+              <a href="tienda.html" class="btn-primary" id="hero-btn-catalog">
+                Explorar Galería de Obras
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="contacto.html" class="btn-secondary" id="hero-btn-custom">Encargar Cuadro a Medida</a>
+            </div>
+          </div>
+
+          <div class="hero-image-wrapper">
+            <img src="img/velero-marino.jpg" alt="Cuadro Viento Marino - Velero al Atardecer sobre caballete" width="800" height="600" loading="eager">
+            <div class="hero-image-caption">
+              <div>
+                <strong>Viento Marino — Velero al Atardecer</strong>
+                <p style="color: var(--color-on-surface-muted); font-size: 0.75rem;">40 x 50 cm · Marina original al óleo</p>
+              </div>
+              <a href="producto.html?obra=velero" class="btn-primary" style="padding: 6px 14px; font-size: 0.75rem;">Ver Obra</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Barra de Valores de Marca
+         ========================================================================== -->
+    <section class="values-bar" aria-label="Compromisos y valores artesanales">
+      <div class="container">
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
+            </div>
+            <div class="value-content">
+              <h3>100% Pintado a Mano</h3>
+              <p>Obras al óleo sobre tela únicas e irrepetibles.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="value-content">
+              <h3>Pigmentos de Alta Calidad</h3>
+              <p>Óleos luminosos y detalles en pan de oro.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </div>
+            <div class="value-content">
+              <h3>Bastidor Listo para Colgar</h3>
+              <p>Madera tensada con alambre de montaje incluido.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="value-content">
+              <h3>Despacho Protegido a Chile</h3>
+              <p>Embalaje rígido con seguro de transporte 100%.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Sección de Obras Destacadas en Stock
+         ========================================================================== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Colección de Obras en Stock</h2>
+          <p>Pinturas originales listas para entrega inmediata en Santiago o despacho protegido a regiones.</p>
+        </div>
+
+        <div class="artworks-grid">
+          <!-- Obra 1: Velero al Atardecer -->
+          <article class="card-product">
+            <div class="card-media">
+              <div class="card-badge-top">
+                <span class="badge-technique" style="background-color: var(--color-primary);">Marina al Óleo</span>
+              </div>
+              <img src="img/velero-marino.jpg" alt="Cuadro Velero en mar sereno al atardecer" width="400" height="400" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-product-title"><a href="producto.html?obra=velero">Viento Marino — Velero al Atardecer</a></h3>
+              <div class="card-product-dimensions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                40 x 50 cm · Marina · Óleo sobre tela
+              </div>
+              <div class="card-product-footer">
+                <div class="card-product-price">$95.000 CLP</div>
+                <a href="producto.html?obra=velero" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Obra 2: Bote en Atardecer Dorado -->
+          <article class="card-product">
+            <div class="card-media">
+              <div class="card-badge-top">
+                <span class="badge-technique" style="background-color: var(--color-secondary);">Atardecer Marino</span>
+              </div>
+              <img src="img/bote-atardecer.jpg" alt="Cuadro Bote Pesquero en atardecer dorado" width="400" height="400" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-product-title"><a href="producto.html?obra=bote">Calma Pescadora — Atardecer Dorado</a></h3>
+              <div class="card-product-dimensions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                50 x 60 cm · Óleo y reflejos dorados
+              </div>
+              <div class="card-product-footer">
+                <div class="card-product-price">$115.000 CLP</div>
+                <a href="producto.html?obra=bote" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Obra 3: Caballo Alazán -->
+          <article class="card-product">
+            <div class="card-media">
+              <div class="card-badge-top">
+                <span class="badge-technique" style="background-color: var(--color-tertiary-strong);">Fuerza & Expresión</span>
+              </div>
+              <img src="img/caballo-alazan.jpg" alt="Cuadro Caballo Alazán al óleo" width="400" height="400" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-product-title"><a href="producto.html?obra=caballo">Brío Salvaje — Caballo Alazán</a></h3>
+              <div class="card-product-dimensions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                50 x 60 cm · Bastidor de madera · Óleo
+              </div>
+              <div class="card-product-footer">
+                <div class="card-product-price">$120.000 CLP</div>
+                <a href="producto.html?obra=caballo" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Obra 4: Manzana Mística & Pan de Oro -->
+          <article class="card-product">
+            <div class="card-media">
+              <div class="card-badge-top">
+                <span class="badge-technique" style="background-color: var(--color-primary);">Pan de Oro & Óleo</span>
+              </div>
+              <img src="img/manzana-dorada.jpg" alt="Cuadro Manzana Mística con interior de pan de oro" width="400" height="400" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-product-title"><a href="producto.html?obra=manzana">Manzana Mística & Mariposa Dorada</a></h3>
+              <div class="card-product-dimensions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                40 x 50 cm · Técnica mixta & Dorado
+              </div>
+              <div class="card-product-footer">
+                <div class="card-product-price">$98.000 CLP</div>
+                <a href="producto.html?obra=manzana" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Obra 5: Callejón Mediterráneo -->
+          <article class="card-product">
+            <div class="card-media">
+              <div class="card-badge-top">
+                <span class="badge-technique" style="background-color: var(--color-secondary);">Paisaje Rústico</span>
+              </div>
+              <img src="img/callejon-rustico.jpg" alt="Cuadro Callejón de Piedra" width="400" height="400" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-product-title"><a href="producto.html?obra=callejon">Rincón Rústico — Callejón de Piedra</a></h3>
+              <div class="card-product-dimensions">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                40 x 50 cm · Paisaje arquitectónico
+              </div>
+              <div class="card-product-footer">
+                <div class="card-product-price">$92.000 CLP</div>
+                <a href="producto.html?obra=callejon" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-2xl);">
+          <a href="tienda.html" class="btn-primary" style="padding: 14px 32px;">
+            Ver Catálogo Completo en la Tienda
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Sección El Taller y Proceso de la Artista
+         ========================================================================== -->
+    <section class="section-padding studio-story-section">
+      <div class="container">
+        <div class="studio-grid">
+          <div class="studio-image-frame">
+            <img src="img/sofia.png" alt="Artista de Lienzo Vivo trabajando en el taller" width="600" height="600" loading="lazy">
+            <div class="studio-quote-badge">
+              «Cada cuadro nace en el caballete con paciencia y materia: capas de óleo y veladuras que dialogan con la luz natural de tu hogar.»
+            </div>
+          </div>
+
+          <div class="studio-text-content">
+            <span class="hero-tag">Manifiesto del Taller</span>
+            <h2>El valor de una obra original en tu pared</h2>
+            <p>
+              En Lienzo Vivo creamos pinturas 100% hechas a mano. Sin impresiones industriales ni láminas digitales: trabajamos con óleos de alta resistencia, bastidores de pino secados en cámara y materias nobles.
+            </p>
+            <p>
+              Cada cuadro se entrega listo para colgar o con marco flotante a elección, firmado por la artista con su correspondiente certificado de autenticidad.
+            </p>
+
+            <ul class="studio-features-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Certificado de autenticidad y numeración de autor.
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Bastidores de madera con alambre tensado de montaje.
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Asesoría gratuita por WhatsApp para fotomontaje a escala en tu sala.
+              </li>
+            </ul>
+
+            <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+              <a href="nosotros.html" class="btn-primary">Conocer más del Taller</a>
+              <a href="contacto.html" class="btn-secondary">Pedir Cuadro a Medida</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Módulo de Captación de Leads (Lead-Form)
+         ========================================================================== -->
+    <section class="section-padding lead-capture-section">
+      <div class="container">
+        <div class="lead-box">
+          <span class="lead-badge">Guía Gratuita en PDF</span>
+          <h3>¿Cómo elegir el tamaño y temática de cuadro para tu living?</h3>
+          <p>
+            Descarga nuestra guía de proporciones de interiorismo + un cupón de <strong>10% de descuento</strong> para tu primera compra.
+          </p>
+
+          <form class="lead-form" id="lead-capture-form" onsubmit="handleLeadSubmit(event)">
+            <input type="email" class="lead-input" id="lead-email-input" placeholder="Ingresa tu correo electrónico..." required aria-label="Correo electrónico para descargar guía">
+            <button type="submit" class="btn-primary" id="lead-submit-btn">Recibir Guía + 10% Dcto</button>
+          </form>
+
+          <div class="lead-success-msg" id="lead-success-msg">
+            ✨ ¡Gracias! Te hemos enviado la guía y el código promocional <strong>GUIA10</strong> a tu correo.
+          </div>
+
+          <p class="lead-disclaimer">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v2h-2v-2zm0-10h2v8h-2V6z"/></svg>
+            Cuidamos tu privacidad. Sin spam. Puedes cancelar tu suscripción en cualquier momento.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Pie de Página Global (Footer)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 style="color: var(--color-primary);">Lienzo Vivo</h3>
+          <p>Taller de arte de autor y cuadros hechos a mano al óleo y técnicas mixtas para enriquecer tu hogar.</p>
+          <div style="margin-top: var(--space-md); display: flex; gap: var(--space-sm);">
+            <span class="badge-technique" style="background-color: var(--color-surface); color: var(--color-primary); border: 1px solid var(--color-border);">Santiago de Chile</span>
+            <span class="badge-technique" style="background-color: var(--color-surface); color: var(--color-primary); border: 1px solid var(--color-border);">Envíos a todo Chile</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explorar</h4>
+          <ul class="footer-links">
+            <li><a href="tienda.html">Galería de Cuadros</a></li>
+            <li><a href="contacto.html">Cuadros a Medida</a></li>
+            <li><a href="blog.html">Blog & Inspiración</a></li>
+            <li><a href="nosotros.html">Historia del Taller</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ayuda & Compras</h4>
+          <ul class="footer-links">
+            <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="carrito.html">Mi Carrito de Compras</a></li>
+            <li><a href="terminos.html">Términos y Garantías</a></li>
+            <li><a href="privacidad.html">Política de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Directo</h4>
+          <ul class="footer-links">
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/56987654321?text=Hola%20Lienzo%20Vivo,%20quiero%20consultar%20por%20los%20cuadros" target="_blank" rel="noopener">+56 9 8765 4321</a></li>
+            <li><strong>Email:</strong> <a href="mailto:hola@lienzovivo.cl">hola@lienzovivo.cl</a></li>
+            <li><strong>Instagram:</strong> <a href="https://instagram.com" target="_blank" rel="noopener">@lienzovivo.arte</a></li>
+            <li><strong>Taller:</strong> Providencia, Santiago (Previa cita)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Lienzo Vivo SpA. Todos los derechos reservados. Diseñado para espacios con alma.</div>
+        <div>
+          <a href="docs/index.html" style="color: var(--color-on-surface-muted); font-size: 0.75rem; text-decoration: underline;">Ver Documentación Técnica del Proyecto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast de Notificación Global -->
+  <div class="toast-notification" id="toast-notification">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-message">Notificación</span>
+  </div>
+
+  <script>
+    // Toggle Menú Móvil
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileDrawer = document.getElementById('mobile-nav-drawer');
+    if (menuToggle && mobileDrawer) {
+      menuToggle.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('open');
+      });
+    }
+
+    // Manejo de Lead Capture Form
+    function handleLeadSubmit(event) {
+      event.preventDefault();
+      const emailInput = document.getElementById('lead-email-input');
+      const successMsg = document.getElementById('lead-success-msg');
+      const form = document.getElementById('lead-capture-form');
+      
+      if (emailInput && emailInput.value.trim() !== '') {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        showToast('¡Guía enviada a ' + emailInput.value + '!');
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 3500);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedCart = localStorage.getItem('lienzo_vivo_cart');
+      const badge = document.getElementById('cart-counter-badge');
+      if (savedCart && badge) {
+        try {
+          const items = JSON.parse(savedCart);
+          badge.textContent = items.length;
+        } catch (e) {}
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuadros a Medida & Contacto — Cotizador de Proyectos | Lienzo Vivo</title>
+  <meta name="description" content="Encarga un cuadro personalizado para tu living con las medidas y tonos exactos de tu pared. Asesoría visual gratuita y fotomontaje a escala.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+
+  <!-- Navbar Global -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="index.html" class="brand-logo" aria-label="Lienzo Vivo - Inicio">
+          <span class="brand-logo-text">Lienzo Vivo</span>
+          <span class="brand-logo-tag">Arte de Autor</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="tienda.html" class="nav-link">Galería / Tienda</a></li>
+          <li><a href="contacto.html" class="nav-link active">Cuadros a Medida</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Consejos</a></li>
+          <li><a href="nosotros.html" class="nav-link">El Taller</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="carrito.html" class="btn-cart-nav" id="nav-cart-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span>Carrito</span>
+            <span class="cart-count">1</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container section-padding">
+      <div class="section-header">
+        <span class="badge-technique" style="background-color: var(--color-tertiary-strong); margin-bottom: 8px;">Servicio Personalizado</span>
+        <h1>Cotiza tu Cuadro a Medida</h1>
+        <p>¿Tienes una pared con medidas especiales o necesitas una combinación de colores específica? Creamos una obra exclusiva adaptada a tu espacio.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-2xl); max-width: 1000px; margin: 0 auto;">
+        
+        <!-- Formulario de Cotización -->
+        <div style="background: white; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-xl); box-shadow: var(--shadow-card);">
+          <h2 style="font-size: 1.5rem; margin-bottom: var(--space-md);">Detalles de tu Encargo</h2>
+
+          <form id="custom-quote-form" onsubmit="handleQuoteSubmit(event)">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); margin-bottom: var(--space-md);">
+              <div>
+                <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Tu Nombre Completo *</label>
+                <input type="text" class="lead-input" style="width: 100%; border-radius: var(--radius-sm);" placeholder="Ej. Sofía Valenzuela" required>
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Correo Electrónico *</label>
+                <input type="email" class="lead-input" style="width: 100%; border-radius: var(--radius-sm);" placeholder="sofia@correo.com" required>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); margin-bottom: var(--space-md);">
+              <div>
+                <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Teléfono / WhatsApp *</label>
+                <input type="tel" class="lead-input" style="width: 100%; border-radius: var(--radius-sm);" placeholder="+56 9 1234 5678" required>
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Comuna de Entrega</label>
+                <input type="text" class="lead-input" style="width: 100%; border-radius: var(--radius-sm);" placeholder="Ej. Providencia, Las Condes, Viña...">
+              </div>
+            </div>
+
+            <!-- Medidas estimadas -->
+            <div style="margin-bottom: var(--space-md);">
+              <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Dimensiones deseadas (Ancho x Alto en cm):</label>
+              <div style="display: flex; gap: var(--space-sm);">
+                <input type="text" class="lead-input" style="border-radius: var(--radius-sm);" placeholder="Ej. 120 x 80 cm" required>
+                <select class="shipping-select" style="margin-bottom: 0; width: 220px;">
+                  <option>1 Pieza individual</option>
+                  <option>Díptico (2 piezas)</option>
+                  <option>Tríptico (3 piezas)</option>
+                  <option>No estoy seguro/a (Asesórenme)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Gama de colores deseada -->
+            <div style="margin-bottom: var(--space-md);">
+              <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 6px;">Paleta de colores que predomina en tu espacio:</label>
+              <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap;">
+                <label class="filter-chip"><input type="checkbox" style="margin-right: 6px;" checked> Tonos Tierra / Arena</label>
+                <label class="filter-chip"><input type="checkbox" style="margin-right: 6px;"> Terracota / Teja</label>
+                <label class="filter-chip"><input type="checkbox" style="margin-right: 6px;"> Verde Salvia</label>
+                <label class="filter-chip"><input type="checkbox" style="margin-right: 6px;"> Blanco & Yeso Monocromo</label>
+              </div>
+            </div>
+
+            <!-- Mensaje -->
+            <div style="margin-bottom: var(--space-lg);">
+              <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Cuéntanos sobre tu espacio (Pared, sofá, estilo):</label>
+              <textarea rows="4" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--color-border);" placeholder="Ej. Busco un cuadro para un sofá de lino de 2 metros. Me gustaría con relieve pronunciado y tonos arena cálidos..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-block" style="padding: 14px; font-size: 1rem;">
+              Enviar Solicitud de Cotización & Simulación
+            </button>
+          </form>
+
+          <div id="quote-success-box" style="display: none; background: #E2F0D9; color: #3B7A57; padding: var(--space-md); border-radius: var(--radius-sm); margin-top: var(--space-md); text-align: center;">
+            ✨ ¡Solicitud recibida! Te contactaremos por WhatsApp o correo en menos de 24 horas con la propuesta visual y presupuesto.
+          </div>
+        </div>
+
+        <!-- Contacto Directo WhatsApp y Dirección -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
+          <div style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <h3 style="font-size: 1.1875rem; margin-bottom: 8px;">Atención Inmediata por WhatsApp</h3>
+            <p style="font-size: 0.875rem; color: var(--color-on-surface-muted); margin-bottom: var(--space-md);">
+              Puedes enviarnos la foto de tu muro directamente por WhatsApp y te hacemos un montaje digital sin compromiso.
+            </p>
+            <a href="https://wa.me/56987654321?text=Hola,%20quiero%20enviar%20una%20foto%20de%20mi%20muro%20para%20un%20cuadro%20a%20medida" target="_blank" class="btn-whatsapp btn-block">
+              Conversar por WhatsApp
+            </a>
+          </div>
+
+          <div style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <h3 style="font-size: 1.1875rem; margin-bottom: 8px;">Taller en Santiago</h3>
+            <p style="font-size: 0.875rem; color: var(--color-on-surface-muted); margin-bottom: 4px;">
+              <strong>Ubicación:</strong> Providencia, Santiago (cerca de Metro Tobalaba).
+            </p>
+            <p style="font-size: 0.875rem; color: var(--color-on-surface-muted); margin-bottom: 4px;">
+              <strong>Horario de atención:</strong> Lunes a Viernes de 10:00 a 19:00 hrs (previa cita).
+            </p>
+            <p style="font-size: 0.875rem; color: var(--color-on-surface-muted);">
+              <strong>Email:</strong> hola@lienzovivo.cl
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 Lienzo Vivo SpA. Todos los derechos reservados.</div>
+        <div><a href="index.html">Inicio</a> · <a href="tienda.html">Tienda</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleQuoteSubmit(event) {
+      event.preventDefault();
+      document.getElementById('custom-quote-form').style.display = 'none';
+      document.getElementById('quote-success-box').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

@@ -2,23 +2,23 @@
 version: alpha
 name: Lienzo Vivo
 colors:
-  primary: "#B85D36"
-  primary-hover: "#9C4A26"
+  primary: "#1A4B75"
+  primary-hover: "#0E3354"
   on-primary: "#FFFFFF"
-  secondary: "#4A6B56"
-  secondary-hover: "#3C5846"
+  secondary: "#2B7A9E"
+  secondary-hover: "#1E5C79"
   on-secondary: "#FFFFFF"
-  tertiary: "#C88A3E"
-  tertiary-strong: "#9E6723"
+  tertiary: "#D98A3C"
+  tertiary-strong: "#B56B24"
   on-tertiary: "#FFFFFF"
-  neutral: "#FAF7F2"
-  surface: "#F0EAE1"
+  neutral: "#FFFFFF"
+  surface: "#F0F5F9"
   surface-card: "#FFFFFF"
-  border: "#DFD5C7"
-  on-surface: "#262320"
-  on-surface-muted: "#665F58"
-  success: "#3B7A57"
-  error: "#B3392E"
+  border: "#D2E0EB"
+  on-surface: "#14212D"
+  on-surface-muted: "#536B7E"
+  success: "#267A5E"
+  error: "#B83636"
 typography:
   headline-display:
     fontFamily: Fraunces
@@ -136,14 +136,14 @@ El estilo visual es orgánico, cálido, contemporáneo, sobrio y refinado (*japa
 
 ## Colors
 
-- **Primary (`#B85D36` - Terracota Arcilla):** Color insignia de la marca. Se utiliza en botones de compra principales, llamadas a la acción, acentos de interacción y enlaces clave.
-- **Primary Hover (`#9C4A26` - Terracota Tostado):** Variante de oscurecimiento interactivo para estados hover y botones activos.
-- **Secondary (`#4A6B56` - Verde Salvia):** Badges de técnicas artesanales, sellos botánicos y fondos de bloques destacados de taller.
-- **Tertiary Strong (`#9E6723` - Ocre Profundo):** Etiquetas de promociones, insignias de "Pieza Única de Autor" y descuentos, asegurando contraste accesible sobre fondo claro.
-- **Neutral (`#FAF7F2` - Lino Crudo):** Fondo principal del sitio web para proporcionar calidez natural y evitar el deslumbramiento.
-- **Surface (`#F0EAE1` - Arena):** Fondo de contenedores secundarios, barras de filtros, módulos de preguntas frecuentes y pie de página.
-- **On-Surface (`#262320` - Carbón Profundo):** Color principal de títulos, encabezados y textos de párrafo.
-- **On-Surface Muted (`#665F58` - Ceniza Cálida):** Medidas en centímetros, fechas, categorías y textos auxiliares.
+- **Primary (`#1A4B75` - Azul Océano Profundo):** Color insignia de la marca. Se utiliza en titulares destacados, botones de compra principales, llamadas a la acción y enlaces clave.
+- **Primary Hover (`#0E3354` - Azul Marino Noche):** Variante de oscurecimiento para estados hover y botones activos.
+- **Secondary (`#2B7A9E` - Azul Turquesa / Brisa Marina):** Badges de técnicas artesanales, sellos y detalles interactivos.
+- **Tertiary Strong (`#B56B24` - Arena Dorada / Atardecer):** Etiquetas de promociones, insignias de "Pieza Única de Autor" y acentos cálidos.
+- **Neutral (`#FFFFFF` - Blanco Puro):** Fondo principal del sitio web para proporcionar máxima luminosidad, limpieza y contraste.
+- **Surface (`#F0F5F9` - Espuma Marina / Blanco Costero):** Fondo de contenedores secundarios, barras de filtros, módulos y pie de página.
+- **On-Surface (`#14212D` - Azul Noche Carbón):** Color principal de títulos, encabezados y textos de párrafo de alta legibilidad.
+- **On-Surface Muted (`#536B7E` - Gris Marino):** Medidas en centímetros, fechas, categorías y textos auxiliares.
 
 ## Typography
 

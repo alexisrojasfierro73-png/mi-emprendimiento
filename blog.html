@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Taller de Inspiración — Consejos de Interiorismo | Lienzo Vivo</title>
+  <meta name="description" content="Aprende a elegir las proporciones de cuadros para tu living, combinar óleos de autor y cuidar tus obras de arte hechas a mano.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+
+  <!-- Navbar Global -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="index.html" class="brand-logo" aria-label="Lienzo Vivo - Inicio">
+          <span class="brand-logo-text">Lienzo Vivo</span>
+          <span class="brand-logo-tag">Arte de Autor</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="tienda.html" class="nav-link">Galería / Tienda</a></li>
+          <li><a href="contacto.html" class="nav-link">Cuadros a Medida</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog & Consejos</a></li>
+          <li><a href="nosotros.html" class="nav-link">El Taller</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="carrito.html" class="btn-cart-nav" id="nav-cart-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span>Carrito</span>
+            <span class="cart-count" id="cart-counter-badge">1</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container section-padding">
+      <div class="section-header">
+        <h1>Inspiración, Guías de Decoración & Taller</h1>
+        <p>Aprende a combinar temáticas, elegir las medidas perfectas en bastidor y cuidar tus cuadros al óleo.</p>
+        
+        <div class="categories-chips-scroll" style="margin-top: var(--space-lg);">
+          <button class="filter-chip active">Todos los Artículos</button>
+          <button class="filter-chip">Guías de Decoración & Escala</button>
+          <button class="filter-chip">Técnicas de Pintura</button>
+          <button class="filter-chip">Procesos del Taller</button>
+        </div>
+      </div>
+
+      <!-- Artículo Destacado Principal (Hero Card) -->
+      <article class="blog-hero-card">
+        <img src="img/caballo-alazan.jpg" alt="Cuadro de caballo alazán en caballete" class="blog-hero-img">
+        <div class="blog-hero-content">
+          <div style="margin-bottom: var(--space-xs);">
+            <span class="badge-technique" style="background-color: var(--color-primary);">Guías de Decoración</span>
+            <span style="font-size: 0.75rem; color: var(--color-on-surface-muted); margin-left: 8px;">4 min de lectura · Octubre 2026</span>
+          </div>
+          <h2 style="font-size: 1.875rem; margin-bottom: var(--space-sm); line-height: 1.25;">
+            <a href="articulo.html" style="color: inherit;">Guía definitiva: ¿Qué tamaño de cuadro poner sobre el sofá para no achicar tu living?</a>
+          </h2>
+          <p style="color: var(--color-on-surface-muted); font-size: 0.9375rem; margin-bottom: var(--space-lg); line-height: 1.6;">
+            Conoce la regla de los 2/3, la distancia correcta de colgado sobre el mueble y cómo una pintura al óleo aporta profundidad y carácter frente a impresiones digitales.
+          </p>
+          <div>
+            <a href="articulo.html" class="btn-primary">
+              Leer Guía Completa
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Grilla de Artículos Secundarios -->
+      <div class="artworks-grid">
+        <!-- Card 1 -->
+        <article class="article-card">
+          <img src="img/manzana-dorada.jpg" alt="Detalles en pan de oro" class="article-card-img">
+          <div class="article-card-body">
+            <div class="article-meta">Técnicas de Pintura · 3 min de lectura</div>
+            <h3 class="article-card-title"><a href="articulo.html">El brillo noble del pan de oro y cómo interactúa con la luz ambiental</a></h3>
+            <p style="font-size: 0.875rem; color: var(--color-on-surface-muted); margin-bottom: var(--space-md); flex: 1;">
+              Descubre cómo los detalles dorados capturan los reflejos de la lámpara en la tarde y aportan misticismo.
+            </p>
+            <a href="articulo.html" class="btn-secondary" style="padding: 6px 14px; font-size: 0.8125rem; align-self: flex-start;">Leer artículo</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="article-card">
+          <img src="img/bote-atardecer.jpg" alt="Puesta de sol y veladuras al óleo" class="article-card-img">
+          <div class="article-card-body">
+            <div class="article-meta">Procesos del Taller · 5 min de lectura</div>
+            <h3 class="article-card-title"><a href="articulo.html">Veladuras al óleo: el secreto detrás de los cielos dorados y atardeceres marinos</a></h3>
+            <p style="font-size: 0.875rem; color: var(--color-on-surface-muted); margin-bottom: var(--space-md); flex: 1;">
+              Capas translúcidas de óleo aplicadas sobre tela para lograr profundidad lumínica en marinas y paisajes.
+            </p>
+            <a href="articulo.html" class="btn-secondary" style="padding: 6px 14px; font-size: 0.8125rem; align-self: flex-start;">Leer artículo</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="article-card">
+          <img src="img/callejon-rustico.jpg" alt="Perspectiva y arquitectura rústica" class="article-card-img">
+          <div class="article-card-body">
+            <div class="article-meta">Guías de Decoración · 4 min de lectura</div>
+            <h3 class="article-card-title"><a href="articulo.html">Cómo integrar cuadros de paisajes arquitectónicos en pasillos y recibidores</a></h3>
+            <p style="font-size: 0.875rem; color: var(--color-on-surface-muted); margin-bottom: var(--space-md); flex: 1;">
+              Los cuadros en formato 40x50 cm con perspectiva crean sensación de amplitud en accesos y corredores estrechos.
+            </p>
+            <a href="articulo.html" class="btn-secondary" style="padding: 6px 14px; font-size: 0.8125rem; align-self: flex-start;">Leer artículo</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 Lienzo Vivo SpA. Todos los derechos reservados.</div>
+        <div><a href="tienda.html">Ver Tienda</a> · <a href="index.html">Inicio</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Ficha de Obra — Pintura Original al Óleo | Lienzo Vivo</title>
+  <meta name="description" content="Detalle de obra original pintada a mano al óleo sobre bastidor de madera. Opciones de marco en roble natural. Despacho seguro a todo Chile.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+</head>
+<body>
+
+  <!-- Navbar Global -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="index.html" class="brand-logo" aria-label="Lienzo Vivo - Inicio">
+          <span class="brand-logo-text">Lienzo Vivo</span>
+          <span class="brand-logo-tag">Galería de Arte</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="tienda.html" class="nav-link active">Galería / Tienda</a></li>
+          <li><a href="contacto.html" class="nav-link">Cuadros a Medida</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Consejos</a></li>
+          <li><a href="nosotros.html" class="nav-link">El Taller</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="carrito.html" class="btn-cart-nav" id="nav-cart-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span>Carrito</span>
+            <span class="cart-count" id="cart-counter-badge">1</span>
+          </a>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Menú móvil -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <ul class="mobile-nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="tienda.html" class="nav-link active">Galería de Obras</a></li>
+        <li><a href="contacto.html" class="nav-link">Cotizar Cuadro a Medida</a></li>
+        <li><a href="blog.html" class="nav-link">Blog de Interiorismo</a></li>
+        <li><a href="nosotros.html" class="nav-link">Sobre el Taller</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Migas de Pan (Breadcrumbs) -->
+      <nav class="breadcrumbs" aria-label="Ruta de navegación">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="tienda.html">Galería de Cuadros</a></li>
+          <li id="breadcrumb-category">Pintura al Óleo</li>
+          <li aria-current="page" id="breadcrumb-title">Obra Original</li>
+        </ol>
+      </nav>
+
+      <!-- Layout de Detalle de Producto -->
+      <div class="product-detail-layout">
+        <!-- Galería de Fotos e Interacción -->
+        <div class="product-gallery-container">
+          <div class="product-main-view">
+            <img id="main-product-img" src="img/velero-marino.jpg" alt="Cuadro en alta resolución sobre caballete de madera">
+          </div>
+
+          <!-- Miniaturas intercambiables -->
+          <div class="gallery-thumbnails-row" id="thumbnails-row">
+            <button class="thumb-btn active" onclick="switchMainImage('img/velero-marino.jpg', this)">
+              <img src="img/velero-marino.jpg" alt="Obra en caballete">
+            </button>
+            <button class="thumb-btn" onclick="switchMainImage('img/bote-atardecer.jpg', this)">
+              <img src="img/bote-atardecer.jpg" alt="Marina en atardecer">
+            </button>
+            <button class="thumb-btn" onclick="switchMainImage('img/caballo-alazan.jpg', this)">
+              <img src="img/caballo-alazan.jpg" alt="Caballo alazán">
+            </button>
+            <button class="thumb-btn" onclick="switchMainImage('img/sofia.png', this)">
+              <img src="img/sofia.png" alt="Proceso en taller">
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel de Información y Configuración -->
+        <div class="product-info-panel">
+          <div class="product-info-header">
+            <span class="badge-technique" id="product-badge" style="margin-bottom: 8px;">Marina Original al Óleo</span>
+            <h1 id="product-title">Viento Marino — Velero al Atardecer</h1>
+            <div class="product-price-large">
+              <span id="display-price">$95.000 CLP</span>
+              <span class="product-price-tax">(IVA incluido · Listo para colgar)</span>
+            </div>
+          </div>
+
+          <!-- Píldoras de Especificaciones Rápidas -->
+          <div class="product-specs-pills">
+            <div class="spec-pill" id="spec-dimensions">📏 <strong>40 x 50 cm</strong></div>
+            <div class="spec-pill" id="spec-medium">🎨 <strong>Marina al Óleo sobre Tela</strong></div>
+            <div class="spec-pill">🪵 <strong>Bastidor de Pino Seco</strong></div>
+            <div class="spec-pill">✨ <strong>Pieza Única Original</strong></div>
+          </div>
+
+          <p id="product-description" style="color: var(--color-on-surface-muted); font-size: 0.9375rem; margin-bottom: var(--space-md); line-height: 1.6;">
+            Pintura marina de 40x50 cm con velero en navegación serena sobre aguas azuladas y el sol poniente reflejándose con calidez en el horizonte.
+          </p>
+
+          <!-- Selector de Enmarcado -->
+          <div class="frame-selector-box">
+            <div class="frame-selector-title">
+              <span style="color: var(--color-primary);">Elige el tipo de enmarcado:</span>
+              <span id="selected-frame-label" style="color: var(--color-secondary); font-weight: 600;">Bastidor Simple Listo para Colgar (+$0)</span>
+            </div>
+
+            <div class="frame-options-grid">
+              <div class="frame-option-card selected" onclick="selectFrame(0, 'Solo Bastidor de Madera Listo para Colgar (+$0)', this)">
+                <div class="frame-option-left">
+                  <div class="frame-swatch-box" style="background-color: #E8E2D5;"></div>
+                  <div>
+                    <strong>Solo Bastidor de Madera</strong>
+                    <div style="font-size: 0.75rem; color: var(--color-on-surface-muted);">Canto terminado, incluye alambre de acero listo para colgar.</div>
+                  </div>
+                </div>
+                <div style="font-weight: 600; font-size: 0.875rem;">+$0 CLP</div>
+              </div>
+
+              <div class="frame-option-card" onclick="selectFrame(28000, 'Marco Flotante Roble Natural (+ $28.000 CLP)', this)">
+                <div class="frame-option-left">
+                  <div class="frame-swatch-box" style="background-color: #C89D6D;"></div>
+                  <div>
+                    <strong>Marco Flotante Roble Natural</strong> <span class="tag-offer" style="font-size: 0.6875rem;">Recomendado</span>
+                    <div style="font-size: 0.75rem; color: var(--color-on-surface-muted);">Enmarca la obra con calidez de madera noble.</div>
+                  </div>
+                </div>
+                <div style="font-weight: 600; font-size: 0.875rem;">+$28.000 CLP</div>
+              </div>
+
+              <div class="frame-option-card" onclick="selectFrame(28000, 'Marco Flotante Blanco Costero (+ $28.000 CLP)', this)">
+                <div class="frame-option-left">
+                  <div class="frame-swatch-box" style="background-color: #FFFFFF; border: 1px solid var(--color-border);"></div>
+                  <div>
+                    <strong>Marco Flotante Blanco Costero</strong>
+                    <div style="font-size: 0.75rem; color: var(--color-on-surface-muted);">Línea mediterránea limpia que realza los tonos marinos.</div>
+                  </div>
+                </div>
+                <div style="font-weight: 600; font-size: 0.875rem;">+$28.000 CLP</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botones de Acción de Compra -->
+          <div class="product-actions-box">
+            <button class="btn-primary btn-block" id="add-to-cart-btn" onclick="addToCart()">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+              Agregar al Carrito de Compras
+            </button>
+
+            <a id="whatsapp-btn-link" href="https://wa.me/56987654321?text=Hola,%20tengo%20dudas%20sobre%20la%20obra%20Viento%20Marino%20(40x50cm)" target="_blank" rel="noopener" class="btn-whatsapp btn-block">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              Consultar por WhatsApp con la Artista
+            </a>
+          </div>
+
+          <!-- Acordeón Desplegable de Detalles Técnicos -->
+          <div class="accordion-wrapper">
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Técnica, Pigmentos y Acabado</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                Pintado al óleo con pigmentos de grado artístico sobre tela tensada en bastidor de pino secado al horno. Sellado final con barniz protector satinado/mate que protege la obra de la humedad ambiental y la decoloración por rayos UV.
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Embalaje Especial y Despacho Seguro</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                Viaja acondicionado en caja rígida con esquineros de alta protección y papel protector antiadherente para la superficie del lienzo. Despacho asegurado a todas las regiones de Chile.
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Certificado de Autenticidad</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                Se entrega con certificado de autenticidad físico firmado y fechado a mano por la artista con código correlativo único de taller.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Obras Relacionadas -->
+      <section class="section-padding" style="border-top: 1px solid var(--color-border);">
+        <div class="section-header">
+          <h2>Otras Obras Disponibles en el Taller</h2>
+          <p>Explora más pinturas al óleo originales listas para montar en tu hogar.</p>
+        </div>
+
+        <div class="artworks-grid">
+          <article class="card-product">
+            <div class="card-media">
+              <img src="img/bote-atardecer.jpg" alt="Bote en Atardecer" width="400" height="400">
+            </div>
+            <div class="card-content">
+              <h3 class="card-product-title"><a href="producto.html?obra=bote">Calma Pescadora — Bote</a></h3>
+              <div class="card-product-dimensions">50 x 60 cm · Atardecer Marino</div>
+              <div class="card-product-footer">
+                <div class="card-product-price">$115.000 CLP</div>
+                <a href="producto.html?obra=bote" class="btn-secondary" style="padding: 6px 14px; font-size: 0.8125rem;">Ver Obra</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-product">
+            <div class="card-media">
+              <img src="img/caballo-alazan.jpg" alt="Caballo Alazán" width="400" height="400">
+            </div>
+            <div class="card-content">
+              <h3 class="card-product-title"><a href="producto.html?obra=caballo">Brío Salvaje — Caballo Alazán</a></h3>
+              <div class="card-product-dimensions">50 x 60 cm · Óleo sobre Tela</div>
+              <div class="card-product-footer">
+                <div class="card-product-price">$120.000 CLP</div>
+                <a href="producto.html?obra=caballo" class="btn-secondary" style="padding: 6px 14px; font-size: 0.8125rem;">Ver Obra</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-product">
+            <div class="card-media">
+              <img src="img/manzana-dorada.jpg" alt="Manzana Mística" width="400" height="400">
+            </div>
+            <div class="card-content">
+              <h3 class="card-product-title"><a href="producto.html?obra=manzana">Manzana Mística & Pan de Oro</a></h3>
+              <div class="card-product-dimensions">40 x 50 cm · Pan de Oro</div>
+              <div class="card-product-footer">
+                <div class="card-product-price">$98.000 CLP</div>
+                <a href="producto.html?obra=manzana" class="btn-secondary" style="padding: 6px 14px; font-size: 0.8125rem;">Ver Obra</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 Lienzo Vivo SpA. Todos los derechos reservados.</div>
+        <div><a href="tienda.html">Volver a la Galería</a> · <a href="contacto.html">Cuadros a Medida</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast-notification">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-message">Obra agregada al carrito</span>
+  </div>
+
+  <script>
+    // Catálogo de 5 obras reales
+    const artworksData = {
+      velero: {
+        title: 'Viento Marino — Velero al Atardecer',
+        price: 95000,
+        dimensions: '40 x 50 cm',
+        medium: 'Marina al Óleo sobre Tela',
+        image: 'img/velero-marino.jpg',
+        badge: 'Marina Clásica al Óleo',
+        description: 'Pintura marina de 40x50 cm con velero en navegación serena sobre aguas azuladas y el sol poniente reflejándose con calidez en el horizonte.'
+      },
+      bote: {
+        title: 'Calma Pescadora — Atardecer Dorado',
+        price: 115000,
+        dimensions: '50 x 60 cm',
+        medium: 'Óleo & Veladuras Cálidas',
+        image: 'img/bote-atardecer.jpg',
+        badge: 'Atardecer Marino & Reflejos',
+        description: 'Bote pesquero en aguas tranquilas bajo una intensa puesta de sol con cielo degradado en tonos naranjas, amarillos y dorados (50x60 cm).'
+      },
+      caballo: {
+        title: 'Brío Salvaje — Caballo Alazán',
+        price: 120000,
+        dimensions: '50 x 60 cm',
+        medium: 'Óleo sobre Tela',
+        image: 'img/caballo-alazan.jpg',
+        badge: 'Fuerza & Expresión en Movimiento',
+        description: 'Pintura al óleo original sobre bastidor de madera de 50x60 cm. Captura la fuerza, dinamismo y nobleza del caballo alazán en dos patas bajo un cielo abierto.'
+      },
+      manzana: {
+        title: 'Manzana Mística & Mariposa Dorada',
+        price: 98000,
+        dimensions: '40 x 50 cm',
+        medium: 'Técnica Mixta & Pan de Oro',
+        image: 'img/manzana-dorada.jpg',
+        badge: 'Pan de Oro & Óleo',
+        description: 'Obra conceptual de 40x50 cm con manzana oscura, interior luminoso esculpido en tonos cálidos y una mariposa dorada que emerge en vuelo.'
+      },
+      callejon: {
+        title: 'Rincón Rústico — Callejón de Piedra',
+        price: 92000,
+        dimensions: '40 x 50 cm',
+        medium: 'Óleo sobre Bastidor',
+        image: 'img/callejon-rustico.jpg',
+        badge: 'Paisaje Arquitectónico Rústico',
+        description: 'Callejón empedrado de inspiración mediterránea y colonial con escalinatas de piedra, vegetación y muros rústicos en perspectiva (40x50 cm).'
+      }
+    };
+
+    let currentArtworkKey = 'velero';
+    let basePrice = 95000;
+    let selectedFramePrice = 0;
+    let selectedFrameName = 'Solo Bastidor de Madera Listo para Colgar';
+
+    function loadArtworkFromUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const obraParam = urlParams.get('obra') || 'velero';
+      
+      if (artworksData[obraParam]) {
+        currentArtworkKey = obraParam;
+        const data = artworksData[obraParam];
+        
+        basePrice = data.price;
+        document.getElementById('product-title').textContent = data.title;
+        document.getElementById('page-title').textContent = data.title + ' | Lienzo Vivo';
+        document.getElementById('breadcrumb-title').textContent = data.title;
+        document.getElementById('product-badge').textContent = data.badge;
+        document.getElementById('product-description').textContent = data.description;
+        document.getElementById('spec-dimensions').innerHTML = '📏 <strong>' + data.dimensions + '</strong>';
+        document.getElementById('spec-medium').innerHTML = '🎨 <strong>' + data.medium + '</strong>';
+        document.getElementById('main-product-img').src = data.image;
+        document.getElementById('display-price').textContent = '$' + data.price.toLocaleString('es-CL') + ' CLP';
+        
+        // WhatsApp button
+        document.getElementById('whatsapp-btn-link').href = 'https://wa.me/56987654321?text=Hola,%20tengo%20dudas%20sobre%20la%20obra%20' + encodeURIComponent(data.title) + '%20(' + encodeURIComponent(data.dimensions) + ')';
+        
+        // Update first thumbnail
+        const firstThumbImg = document.querySelector('#thumbnails-row .thumb-btn img');
+        if (firstThumbImg) firstThumbImg.src = data.image;
+      }
+    }
+
+    function switchMainImage(src, btn) {
+      document.getElementById('main-product-img').src = src;
+      document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function selectFrame(extraPrice, frameText, card) {
+      selectedFramePrice = extraPrice;
+      selectedFrameName = frameText;
+      
+      document.querySelectorAll('.frame-option-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      
+      document.getElementById('selected-frame-label').textContent = frameText;
+      const totalPrice = basePrice + selectedFramePrice;
+      document.getElementById('display-price').textContent = '$' + totalPrice.toLocaleString('es-CL') + ' CLP';
+    }
+
+    function toggleAccordion(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = body.style.display === 'block';
+      document.querySelectorAll('.accordion-body').forEach(b => b.style.display = 'none');
+      if (!isOpen) body.style.display = 'block';
+    }
+
+    function addToCart() {
+      const current = artworksData[currentArtworkKey];
+      const item = {
+        id: currentArtworkKey,
+        title: current.title,
+        dimensions: current.dimensions,
+        frame: selectedFrameName,
+        unitPrice: basePrice + selectedFramePrice,
+        quantity: 1,
+        image: current.image
+      };
+
+      let cart = [];
+      try {
+        const saved = localStorage.getItem('lienzo_vivo_cart');
+        if (saved) cart = JSON.parse(saved);
+      } catch (e) {}
+
+      const existingIdx = cart.findIndex(i => i.id === item.id);
+      if (existingIdx >= 0) {
+        cart[existingIdx] = item;
+      } else {
+        cart.push(item);
+      }
+
+      localStorage.setItem('lienzo_vivo_cart', JSON.stringify(cart));
+      document.getElementById('cart-counter-badge').textContent = cart.length;
+
+      showToast('¡"' + current.title + '" agregada al carrito con éxito!');
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3500);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadArtworkFromUrl();
+      const saved = localStorage.getItem('lienzo_vivo_cart');
+      if (saved) {
+        try {
+          const items = JSON.parse(saved);
+          document.getElementById('cart-counter-badge').textContent = items.length;
+        } catch (e) {}
+      }
+    });
+  </script>
+</body>
+</html>

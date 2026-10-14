@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Obras Originales — Tienda de Cuadros | Lienzo Vivo</title>
+  <meta name="description" content="Explora nuestra colección de cuadros al óleo pintados a mano en caballete. Filtra por temática, medidas y colores para encontrar la obra perfecta.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+</head>
+<body>
+
+  <!-- Navbar Global -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="index.html" class="brand-logo" aria-label="Lienzo Vivo - Inicio">
+          <span class="brand-logo-text">Lienzo Vivo</span>
+          <span class="brand-logo-tag">Galería de Arte</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="tienda.html" class="nav-link active">Galería / Tienda</a></li>
+          <li><a href="contacto.html" class="nav-link">Cuadros a Medida</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Consejos</a></li>
+          <li><a href="nosotros.html" class="nav-link">El Taller</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="carrito.html" class="btn-cart-nav" id="nav-cart-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span>Carrito</span>
+            <span class="cart-count" id="cart-counter-badge">1</span>
+          </a>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <ul class="mobile-nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="tienda.html" class="nav-link active">Galería de Obras</a></li>
+        <li><a href="contacto.html" class="nav-link">Cotizar Cuadro a Medida</a></li>
+        <li><a href="blog.html" class="nav-link">Blog de Interiorismo</a></li>
+        <li><a href="nosotros.html" class="nav-link">Sobre el Taller</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="container section-padding">
+      <!-- Cabecera de Tienda -->
+      <div class="store-header">
+        <h1>Galería de Obras Originales</h1>
+        <p>Cuadros pintados 100% a mano al óleo en bastidores de madera. Obras únicas disponibles para entrega inmediata con embalaje reforzado a todo Chile.</p>
+        
+        <!-- Buscador integrado -->
+        <div class="store-search-bar">
+          <svg class="store-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="search" class="store-search-input" id="store-search-input" placeholder="Buscar por temática, nombre o técnica (ej. velero, caballo, manzana, atardecer)..." oninput="filterArtworks()">
+        </div>
+
+        <!-- Barra superior de categorías en chips -->
+        <div class="categories-chips-scroll" role="tablist">
+          <button class="filter-chip active" data-category="all" onclick="selectCategoryChip(this, 'all')">Todas las Obras (5)</button>
+          <button class="filter-chip" data-category="marina" onclick="selectCategoryChip(this, 'marina')">Marinas & Costas</button>
+          <button class="filter-chip" data-category="animales" onclick="selectCategoryChip(this, 'animales')">Animales & Fuerza</button>
+          <button class="filter-chip" data-category="simbolico" onclick="selectCategoryChip(this, 'simbolico')">Simbólicos & Dorado</button>
+          <button class="filter-chip" data-category="arquitectura" onclick="selectCategoryChip(this, 'arquitectura')">Paisaje & Rústico</button>
+        </div>
+      </div>
+
+      <!-- Layout de Tienda: Sidebar + Catálogo -->
+      <div class="store-layout">
+        <!-- Sidebar de Filtros -->
+        <aside class="store-sidebar">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-md);">
+            <h3 style="font-size: 1.125rem; color: var(--color-primary);">Filtros</h3>
+            <button onclick="resetFilters()" style="background: none; border: none; font-size: 0.8125rem; color: var(--color-secondary); cursor: pointer; text-decoration: underline;">Limpiar</button>
+          </div>
+
+          <!-- Filtro por Medidas -->
+          <div class="filter-group">
+            <h4 class="filter-group-title">Medidas de Bastidor</h4>
+            <ul class="filter-options-list">
+              <li>
+                <label class="filter-checkbox-label">
+                  <input type="checkbox" name="size" value="50x60" onchange="filterArtworks()"> 50 x 60 cm (2)
+                </label>
+              </li>
+              <li>
+                <label class="filter-checkbox-label">
+                  <input type="checkbox" name="size" value="40x50" onchange="filterArtworks()"> 40 x 50 cm (3)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Filtro por Paleta de Color -->
+          <div class="filter-group">
+            <h4 class="filter-group-title">Gama Cromática</h4>
+            <div class="filter-swatches">
+              <button class="color-swatch-btn active" style="background-color: #1A4B75;" title="Azul Marino / Océano" data-color="azul" onclick="toggleColorFilter(this, 'azul')"></button>
+              <button class="color-swatch-btn" style="background-color: #D98A3C;" title="Dorado / Atardecer" data-color="dorado" onclick="toggleColorFilter(this, 'dorado')"></button>
+              <button class="color-swatch-btn" style="background-color: #B85D36;" title="Cálido / Alazán" data-color="calido" onclick="toggleColorFilter(this, 'calido')"></button>
+              <button class="color-swatch-btn" style="background-color: #262320;" title="Oscuro / Noche" data-color="oscuro" onclick="toggleColorFilter(this, 'oscuro')"></button>
+              <button class="color-swatch-btn" style="background-color: #EAD5C3;" title="Piedra / Arena" data-color="tierra" onclick="toggleColorFilter(this, 'tierra')"></button>
+            </div>
+          </div>
+
+          <!-- Asesoría rápida -->
+          <div style="background-color: var(--color-surface); padding: var(--space-md); border-radius: var(--radius-sm); margin-top: var(--space-md); border: 1px solid var(--color-border);">
+            <strong style="display: block; font-size: 0.8125rem; margin-bottom: 4px; color: var(--color-primary);">¿Quieres ver videos de la obra?</strong>
+            <p style="font-size: 0.75rem; color: var(--color-on-surface-muted); margin-bottom: 8px;">Escríbenos por WhatsApp y te enviamos tomas en alta definición de la pincelada y textura.</p>
+            <a href="https://wa.me/56987654321?text=Hola,%20quiero%20ver%20videos%20en%20detalle%20de%20los%20cuadros" target="_blank" rel="noopener" class="btn-whatsapp" style="font-size: 0.75rem; padding: 8px 12px; width: 100%;">
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </aside>
+
+        <!-- Grilla de Obras (Catálogo Dinámico) -->
+        <section>
+          <div class="artworks-grid" id="catalog-grid">
+            
+            <!-- Obra 1: Velero al Atardecer -->
+            <article class="card-product" data-title="viento marino velero atardecer marina mar oleo 40x50" data-category="marina" data-size="40x50" data-color="azul dorado calido">
+              <div class="card-media">
+                <div class="card-badge-top">
+                  <span class="badge-technique" style="background-color: var(--color-primary);">Marina al Óleo</span>
+                </div>
+                <img src="img/velero-marino.jpg" alt="Cuadro Velero al atardecer en mar sereno" width="400" height="400" loading="lazy">
+              </div>
+              <div class="card-content">
+                <h3 class="card-product-title"><a href="producto.html?obra=velero">Viento Marino — Velero al Atardecer</a></h3>
+                <div class="card-product-dimensions">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                  40 x 50 cm · Marina · Óleo sobre tela
+                </div>
+                <div class="card-product-footer">
+                  <div class="card-product-price">$95.000 CLP</div>
+                  <a href="producto.html?obra=velero" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Obra 2: Bote en Atardecer Dorado -->
+            <article class="card-product" data-title="calma pescadora bote lancha mar atardecer dorado 50x60" data-category="marina" data-size="50x60" data-color="dorado calido azul">
+              <div class="card-media">
+                <div class="card-badge-top">
+                  <span class="badge-technique" style="background-color: var(--color-secondary);">Atardecer Marino</span>
+                </div>
+                <img src="img/bote-atardecer.jpg" alt="Cuadro Bote en atardecer dorado con sol poniente" width="400" height="400" loading="lazy">
+              </div>
+              <div class="card-content">
+                <h3 class="card-product-title"><a href="producto.html?obra=bote">Calma Pescadora — Atardecer Dorado</a></h3>
+                <div class="card-product-dimensions">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                  50 x 60 cm · Óleo y reflejos dorados
+                </div>
+                <div class="card-product-footer">
+                  <div class="card-product-price">$115.000 CLP</div>
+                  <a href="producto.html?obra=bote" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Obra 3: Caballo Alazán -->
+            <article class="card-product" data-title="brio salvaje caballo alazan oleo cielo tierra 50x60" data-category="animales" data-size="50x60" data-color="calido azul tierra">
+              <div class="card-media">
+                <div class="card-badge-top">
+                  <span class="badge-technique" style="background-color: var(--color-tertiary-strong);">Fuerza & Expresión</span>
+                </div>
+                <img src="img/caballo-alazan.jpg" alt="Cuadro Brío Salvaje - Caballo Alazán" width="400" height="400" loading="lazy">
+              </div>
+              <div class="card-content">
+                <h3 class="card-product-title"><a href="producto.html?obra=caballo">Brío Salvaje — Caballo Alazán</a></h3>
+                <div class="card-product-dimensions">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                  50 x 60 cm · Óleo original sobre bastidor
+                </div>
+                <div class="card-product-footer">
+                  <div class="card-product-price">$120.000 CLP</div>
+                  <a href="producto.html?obra=caballo" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Obra 4: Manzana Mística & Pan de Oro -->
+            <article class="card-product" data-title="manzana mistica mariposa dorada pan de oro negro 40x50" data-category="simbolico" data-size="40x50" data-color="dorado oscuro">
+              <div class="card-media">
+                <div class="card-badge-top">
+                  <span class="badge-technique" style="background-color: var(--color-primary);">Pan de Oro & Óleo</span>
+                </div>
+                <img src="img/manzana-dorada.jpg" alt="Cuadro Manzana Mística con interior de pan de oro" width="400" height="400" loading="lazy">
+              </div>
+              <div class="card-content">
+                <h3 class="card-product-title"><a href="producto.html?obra=manzana">Manzana Mística & Mariposa Dorada</a></h3>
+                <div class="card-product-dimensions">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                  40 x 50 cm · Técnica mixta & Dorado
+                </div>
+                <div class="card-product-footer">
+                  <div class="card-product-price">$98.000 CLP</div>
+                  <a href="producto.html?obra=manzana" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Obra 5: Callejón Mediterráneo -->
+            <article class="card-product" data-title="rincon rustico callejon colonial piedra escaleras 40x50" data-category="arquitectura" data-size="40x50" data-color="tierra azul">
+              <div class="card-media">
+                <div class="card-badge-top">
+                  <span class="badge-technique" style="background-color: var(--color-secondary);">Paisaje Arquitectónico</span>
+                </div>
+                <img src="img/callejon-rustico.jpg" alt="Cuadro Callejón Rústico con escaleras de piedra" width="400" height="400" loading="lazy">
+              </div>
+              <div class="card-content">
+                <h3 class="card-product-title"><a href="producto.html?obra=callejon">Rincón Rústico — Callejón de Piedra</a></h3>
+                <div class="card-product-dimensions">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                  40 x 50 cm · Óleo sobre bastidor
+                </div>
+                <div class="card-product-footer">
+                  <div class="card-product-price">$92.000 CLP</div>
+                  <a href="producto.html?obra=callejon" class="btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">Ver Obra & Medidas</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+      </div>
+
+      <!-- Banner de Cuadros a Medida al pie de la Tienda -->
+      <div class="custom-order-banner">
+        <div>
+          <h2 style="font-size: 1.5rem; margin-bottom: 4px; color: var(--color-primary);">¿Buscas una temática o medida específica?</h2>
+          <p style="color: var(--color-on-surface-muted); font-size: 0.9375rem;">Pintamos cuadros personalizados a pedido con tus motivos, tonos marinos y proporciones preferidas.</p>
+        </div>
+        <a href="contacto.html" class="btn-primary" style="white-space: nowrap;">Cotizar Cuadro a Medida</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 Lienzo Vivo SpA. Todos los derechos reservados.</div>
+        <div><a href="index.html">Inicio</a> · <a href="contacto.html">Contacto</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let activeCategory = 'all';
+    let activeColor = null;
+
+    function selectCategoryChip(button, category) {
+      document.querySelectorAll('.categories-chips-scroll .filter-chip').forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+      activeCategory = category;
+      filterArtworks();
+    }
+
+    function toggleColorFilter(button, color) {
+      if (activeColor === color) {
+        activeColor = null;
+        button.classList.remove('active');
+      } else {
+        document.querySelectorAll('.color-swatch-btn').forEach(b => b.classList.remove('active'));
+        button.classList.add('active');
+        activeColor = color;
+      }
+      filterArtworks();
+    }
+
+    function resetFilters() {
+      document.getElementById('store-search-input').value = '';
+      document.querySelectorAll('input[name="size"]').forEach(c => c.checked = false);
+      document.querySelectorAll('.color-swatch-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.categories-chips-scroll .filter-chip').forEach(b => b.classList.remove('active'));
+      document.querySelector('.categories-chips-scroll .filter-chip[data-category="all"]').classList.add('active');
+      activeCategory = 'all';
+      activeColor = null;
+      filterArtworks();
+    }
+
+    function filterArtworks() {
+      const searchTerm = document.getElementById('store-search-input').value.toLowerCase().trim();
+      const selectedSizes = Array.from(document.querySelectorAll('input[name="size"]:checked')).map(c => c.value);
+      const cards = document.querySelectorAll('#catalog-grid .card-product');
+
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title') || '';
+        const cat = card.getAttribute('data-category') || '';
+        const size = card.getAttribute('data-size') || '';
+        const col = card.getAttribute('data-color') || '';
+
+        const matchSearch = searchTerm === '' || title.includes(searchTerm);
+        const matchCategory = activeCategory === 'all' || cat.includes(activeCategory);
+        const matchSize = selectedSizes.length === 0 || selectedSizes.includes(size);
+        const matchColor = !activeColor || col.includes(activeColor);
+
+        if (matchSearch && matchCategory && matchSize && matchColor) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Toggle Móvil
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileDrawer = document.getElementById('mobile-nav-drawer');
+    if (menuToggle && mobileDrawer) {
+      menuToggle.addEventListener('click', () => mobileDrawer.classList.toggle('open'));
+    }
+  </script>
+</body>
+</html>

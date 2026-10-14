@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras — Despacho Protegido | Lienzo Vivo</title>
+  <meta name="description" content="Revisa tus obras de arte seleccionadas, cotiza el despacho por comuna y procesa tu compra segura con garantía de embalaje de madera.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+
+  <!-- Navbar Global -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="index.html" class="brand-logo" aria-label="Lienzo Vivo - Inicio">
+          <span class="brand-logo-text">Lienzo Vivo</span>
+          <span class="brand-logo-tag">Arte de Autor</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="tienda.html" class="nav-link">Galería / Tienda</a></li>
+          <li><a href="contacto.html" class="nav-link">Cuadros a Medida</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Consejos</a></li>
+          <li><a href="nosotros.html" class="nav-link">El Taller</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="carrito.html" class="btn-cart-nav active" id="nav-cart-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span>Carrito</span>
+            <span class="cart-count" id="cart-counter-badge">1</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container section-padding">
+      <div style="margin-bottom: var(--space-xl);">
+        <h1 style="font-size: 2.25rem; margin-bottom: 4px;">Tu Carrito de Obras de Arte</h1>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--color-secondary);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <strong>Compra 100% protegida:</strong> Embalaje especial reforzado y seguro de transporte incluido a todo Chile.
+        </div>
+      </div>
+
+      <div class="cart-layout">
+        <!-- Lista de Obras en el Carrito -->
+        <section>
+          <div class="cart-items-list" id="cart-items-container">
+            <!-- Item cargado dinámicamente o por defecto -->
+            <div class="cart-item-card" id="item-cart-default">
+              <img id="cart-item-img" src="img/caballo-alazan.jpg" alt="Cuadro en el carrito" class="cart-item-thumb">
+              <div class="cart-item-info">
+                <h3 id="cart-item-title">Brío Salvaje — Caballo Alazán</h3>
+                <p id="cart-item-frame-text">Solo Bastidor de Madera · 50 x 60 cm</p>
+                <div style="margin-top: 6px; display: inline-flex; align-items: center; gap: 8px;">
+                  <span class="badge-technique" style="font-size: 0.6875rem;">Obra Original</span>
+                  <span style="font-size: 0.75rem; color: var(--color-on-surface-muted);">Cantidad: 1</span>
+                </div>
+              </div>
+              <div style="text-align: right;">
+                <div class="cart-item-price" id="cart-item-price-display">$120.000 CLP</div>
+                <button class="cart-item-remove-btn" onclick="removeItem()" title="Eliminar obra del carrito">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nota de Embalaje Artesanal -->
+          <div style="background-color: var(--color-surface); padding: var(--space-md); border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-top: var(--space-md); display: flex; gap: var(--space-sm); align-items: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <div style="font-size: 0.8125rem;">
+              <strong>Embalaje Especial sin costo:</strong> Fabricamos una estructura protectora para asegurar que el bastidor viaje sin roces directo a tu puerta.
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-lg);">
+            <a href="tienda.html" class="btn-secondary" style="font-size: 0.875rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              Seguir Explorando la Galería
+            </a>
+          </div>
+        </section>
+
+        <!-- Resumen de Compra y Calculador de Envío -->
+        <aside class="cart-summary-box">
+          <h2 class="cart-summary-title">Resumen de tu Pedido</h2>
+
+          <div class="summary-row">
+            <span>Subtotal de obras</span>
+            <span id="summary-subtotal">$120.000 CLP</span>
+          </div>
+
+          <!-- Calculador de Despacho por Comuna -->
+          <div class="shipping-calc-box">
+            <label for="shipping-region">Cotizar Despacho Seguro en Chile:</label>
+            <select id="shipping-region" class="shipping-select" onchange="updateShipping()">
+              <option value="8900">Región Metropolitana — Providencia / Las Condes / Vitacura ($8.900)</option>
+              <option value="9900">Región Metropolitana — Otras Comunas ($9.900)</option>
+              <option value="16500">Región de Valparaíso / Viña del Mar ($16.500)</option>
+              <option value="18900">Zona Centro-Sur (Concepción, Chillán, Rancagua) ($18.900)</option>
+              <option value="24900">Zona Norte / Sur Extremo (Antofagasta, Puerto Montt) ($24.900)</option>
+              <option value="0">Retiro coordinado en Taller de Santiago ($0 Gratis)</option>
+            </select>
+            <div style="font-size: 0.75rem; color: var(--color-on-surface-muted);" id="shipping-eta-text">
+              ⏱️ Tiempo estimado de entrega: 2 a 4 días hábiles.
+            </div>
+          </div>
+
+          <div class="summary-row">
+            <span>Costo de despacho</span>
+            <span id="summary-shipping">$8.900 CLP</span>
+          </div>
+
+          <div class="summary-row" id="discount-row" style="display: none; color: var(--color-secondary);">
+            <span>Descuento cupón (10%)</span>
+            <span id="summary-discount">-$12.000 CLP</span>
+          </div>
+
+          <!-- Cupón de Descuento -->
+          <div class="coupon-row">
+            <input type="text" id="coupon-code-input" class="coupon-input" placeholder="Cupón (ej. GUIA10)">
+            <button type="button" class="btn-secondary" onclick="applyCoupon()" style="padding: 8px 16px; font-size: 0.8125rem;">Aplicar</button>
+          </div>
+          <div id="coupon-feedback" style="font-size: 0.75rem; margin-top: -6px; margin-bottom: 8px; display: none;"></div>
+
+          <!-- Total Final -->
+          <div class="summary-row total-row">
+            <span>Total a Pagar</span>
+            <span id="summary-total" style="color: var(--color-primary);">$128.900 CLP</span>
+          </div>
+
+          <!-- Botón de Pago -->
+          <button class="btn-primary btn-block" style="padding: 15px; font-size: 1.0625rem; margin-top: var(--space-md);" onclick="proceedToCheckout()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            Continuar al Pago Seguro (Webpay)
+          </button>
+
+          <!-- Sellos de Confianza -->
+          <div class="trust-badges-grid">
+            <div class="trust-badge-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-secondary)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              <span>Llegada Intacta</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-secondary)"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Obra 100% Original</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-secondary)"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <span>Webpay Plus / SSL</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-secondary)"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Atención Directa</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 Lienzo Vivo SpA. Todos los derechos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Pago Simulado -->
+  <div id="checkout-modal" style="display: none; position: fixed; inset: 0; background: rgba(38,35,32,0.7); z-index: 3000; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: white; border-radius: var(--radius-lg); max-width: 480px; width: 100%; padding: var(--space-xl); text-align: center; box-shadow: var(--shadow-modal);">
+      <div style="width: 50px; height: 50px; border-radius: 50%; background: #E2F0D9; color: #3B7A57; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md);">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 style="font-size: 1.5rem; margin-bottom: 8px;">¡Simulación de Pasarela Webpay!</h3>
+      <p style="color: var(--color-on-surface-muted); font-size: 0.9375rem; margin-bottom: var(--space-lg);">
+        En el sitio en producción serías redirigido a Transbank Webpay Plus para pagar con tarjeta de Débito o Crédito en cuotas sin interés.
+      </p>
+      <div style="background: var(--color-surface); padding: var(--space-md); border-radius: var(--radius-sm); margin-bottom: var(--space-lg); font-size: 0.875rem; text-align: left;">
+        <div><strong>Pedido N°:</strong> LV-2026-9104</div>
+        <div><strong>Monto:</strong> <span id="modal-total-display">$128.900 CLP</span></div>
+        <div><strong>Despacho:</strong> Embalaje rígido protegido</div>
+      </div>
+      <button class="btn-primary btn-block" onclick="closeCheckoutModal()">Entendido / Finalizar Demostración</button>
+    </div>
+  </div>
+
+  <script>
+    let subtotal = 120000;
+    let shippingCost = 8900;
+    let discountRate = 0;
+
+    function updateSummary() {
+      const discountAmount = subtotal * discountRate;
+      const total = (subtotal - discountAmount) + shippingCost;
+
+      document.getElementById('summary-subtotal').textContent = '$' + subtotal.toLocaleString('es-CL') + ' CLP';
+      document.getElementById('summary-shipping').textContent = '$' + shippingCost.toLocaleString('es-CL') + ' CLP';
+      
+      const discountRow = document.getElementById('discount-row');
+      if (discountRate > 0) {
+        discountRow.style.display = 'flex';
+        document.getElementById('summary-discount').textContent = '-$' + Math.round(discountAmount).toLocaleString('es-CL') + ' CLP';
+      } else {
+        discountRow.style.display = 'none';
+      }
+
+      document.getElementById('summary-total').textContent = '$' + Math.round(total).toLocaleString('es-CL') + ' CLP';
+      document.getElementById('modal-total-display').textContent = '$' + Math.round(total).toLocaleString('es-CL') + ' CLP';
+    }
+
+    function updateShipping() {
+      const select = document.getElementById('shipping-region');
+      shippingCost = parseInt(select.value, 10);
+      updateSummary();
+    }
+
+    function applyCoupon() {
+      const input = document.getElementById('coupon-code-input').value.trim().toUpperCase();
+      const feedback = document.getElementById('coupon-feedback');
+      feedback.style.display = 'block';
+
+      if (input === 'GUIA10' || input === 'LIENZO10') {
+        discountRate = 0.10;
+        feedback.style.color = 'var(--color-success)';
+        feedback.textContent = '✓ ¡Cupón aplicado! 10% de descuento en tus obras.';
+      } else {
+        discountRate = 0;
+        feedback.style.color = 'var(--color-error)';
+        feedback.textContent = '✗ Cupón no válido o expirado. Prueba con GUIA10.';
+      }
+      updateSummary();
+    }
+
+    function removeItem() {
+      const item = document.getElementById('item-cart-default');
+      if (item) {
+        item.style.opacity = '0.3';
+        setTimeout(() => {
+          item.remove();
+          subtotal = 0;
+          shippingCost = 0;
+          document.getElementById('cart-items-container').innerHTML = `
+            <div style="text-align: center; padding: 40px 20px; background: white; border: 1px dashed var(--color-border); border-radius: var(--radius-md);">
+              <p style="font-size: 1.125rem; color: var(--color-on-surface-muted); margin-bottom: 16px;">Tu carrito está vacío actualmente.</p>
+              <a href="tienda.html" class="btn-primary">Ver Obras Disponibles</a>
+            </div>
+          `;
+          document.getElementById('cart-counter-badge').textContent = '0';
+          localStorage.removeItem('lienzo_vivo_cart');
+          updateSummary();
+        }, 300);
+      }
+    }
+
+    function proceedToCheckout() {
+      const modal = document.getElementById('checkout-modal');
+      modal.style.display = 'flex';
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkout-modal').style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('lienzo_vivo_cart');
+      if (saved) {
+        try {
+          const items = JSON.parse(saved);
+          if (items.length > 0) {
+            const first = items[0];
+            subtotal = first.unitPrice;
+            document.getElementById('cart-item-price-display').textContent = '$' + first.unitPrice.toLocaleString('es-CL') + ' CLP';
+            document.getElementById('cart-item-title').textContent = first.title;
+            document.getElementById('cart-item-frame-text').textContent = first.frame + ' · ' + first.dimensions;
+            if (first.image) {
+              document.getElementById('cart-item-img').src = first.image;
+            }
+          }
+        } catch (e) {}
+      }
+      updateSummary();
+    });
+  </script>
+</body>
+</html>
